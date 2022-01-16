@@ -1,6 +1,7 @@
 {
   "testFiles": [
-    "**/*.{feature,features,ts}"
+    "*.{feature,features,ts}",
+    "**/*.{ts,tsx}"
   ],
   "ignoreTestFiles": "**/typings/*.*",
   "viewportWidth": 1920,
@@ -16,5 +17,6 @@
     "overwrite": false,
     "html": false,
     "json": true
-  }
+  },
+  "baseUrl": "https://kasa.com/"
 }
