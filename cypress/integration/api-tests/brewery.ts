@@ -2,7 +2,7 @@ import { Beer, Hop } from './typings/brewery';
 const API_ENDPOINT = 'https://api.punkapi.com/v2/beers/';
 
 describe('Brewery API Testing task', () => {
-
+  //only one beer specifies the task so I cannot set up multiple examples
   it('Which beer has \'Wyeast 3522 - Belgian Ardennes\' yeast and \'Tomahawk\' hop in it', () => {
 
     const yeast: string = 'Wyeast 3522';
@@ -27,7 +27,7 @@ describe('Brewery API Testing task', () => {
       response?.body?.forEach((beer: Beer) => {
         expect(beer?.ingredients?.yeast).to.equal('Wyeast 3522 - Belgian Ardennes™');
         expect(beer?.ingredients?.hops).to.be.an('array');
-        // beer has 'Wyeast 3522 - Belgian Ardennes' yeast in it with 'Tomahawk' hops
+        // only one beer has 'Wyeast 3522 - Belgian Ardennes' yeast in it with 'Tomahawk' hops
         beer?.ingredients?.hops.some((hop: Hop) => hop?.name === 'Tomahawk') ? beerWithTomahawk = beer : null;
       });
 
