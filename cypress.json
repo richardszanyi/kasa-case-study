@@ -1,0 +1,20 @@
+{
+  "testFiles": [
+    "**/*.{feature,features,ts}"
+  ],
+  "ignoreTestFiles": "**/typings/*.*",
+  "viewportWidth": 1920,
+  "viewportHeight": 1080,
+  "defaultCommandTimeout": 20000,
+  "chromeWebSecurity": false,
+  "outputFolder": "./reports",
+  "generate": true,
+  "generateReport": true,
+  "reporter": "mochawesome",
+  "reporterOptions": {
+    "reportDir": "cypress/results",
+    "overwrite": false,
+    "html": false,
+    "json": true
+  }
+}
